@@ -44,7 +44,7 @@ def retrieve_current_followers() -> list[tuple]:
 
 def write_to_log(message: str) -> None:
     with open("log.txt", "a") as f:
-        f.write(f"\n{datetime.now().strftime("%d/%m/%Y %H:%M:%S")} {message}")
+        f.write(f"\n{datetime.now().strftime('%d/%m/%Y %H:%M:%S')} {message}")
 
 url = "https://open.spotify.com/user/" + user_id + "/followers"
 driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()))
